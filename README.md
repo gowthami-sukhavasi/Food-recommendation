@@ -1,3 +1,3 @@
-# the_noobs_fullstack_20_online_1
+# The project is live on:
 
  https://gowthami.live/Food-recommendation/
