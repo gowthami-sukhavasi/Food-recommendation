@@ -6,14 +6,12 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="jsfile.js"></script>
-    <script type="text/javascript" src="zomatoapi.js"></script>
 </head>
 
 <body>
     <section class="header" id="hide-div" style="display: block">
-        <h1><a href="" class="typewrite" data-period="2000"
+        <h1><a href class="typewrite" data-period="2000"
                 data-type='["Welcome foodies!", "Order, Eat, Sleep, Repeat", "Hangry is an emotion"]'>
                 <span class="wrap"></span>
             </a>
@@ -50,7 +48,8 @@
                 </div>
                 <div class="col-md-3">
                     <div class="gallery-box">
-                        <img src="https://media3.giphy.com/media/lGbz7CsaCj4Tm/giphy.gif?cid=790b7611dfc801f7206ce4a3348758d053b95de67fdfd034&rid=giphy.gif&ct=g">
+                        <img
+                            src="https://media3.giphy.com/media/lGbz7CsaCj4Tm/giphy.gif?cid=790b7611dfc801f7206ce4a3348758d053b95de67fdfd034&rid=giphy.gif&ct=g">
                         <h4>Comfort Food</h4>
                     </div>
                 </div>
@@ -76,10 +75,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h2>Get 10% off on pizza today</h2>
-                        <p>Order pizza before 11pm tonight and avail 10% flat discount.</p>
+                        <p>Order pizza before 11pm tonight and avail 10%
+                            flat discount.</p>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="booking-btn">Order now</button>
+                        <button type="button" class="booking-btn">Order
+                            now</button>
 
                     </div>
                 </div>
@@ -92,18 +93,20 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p> One of the amazing experience. I can browse all my favourite food things at a single place.
-                            From biryani to coffee, from healthy foods to deserts, everything is great!
+                        <p> One of the amazing experience. I can browse all
+                            my favourite food things at a single place.
+                            From biryani to coffee, from healthy foods to
+                            deserts, everything is great!
                         </p>
                         <h5>Abhilasha </h5>
                         <small>Uttarakand</small>
                     </div>
-                    <img
-                        src="https://i.pinimg.com/736x/92/a5/02/92a5029a12e633636611e69680b1f556.jpg">
+                    <img src="https://i.pinimg.com/736x/92/a5/02/92a5029a12e633636611e69680b1f556.jpg">
                 </div>
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p>Well planned, just what a working professional who doesn't have time to plan a surprise
+                        <p>Well planned, just what a working professional
+                            who doesn't have time to plan a surprise
                             requires.
                             Clean UI and variety of cuisines.</p>
                         <h5>Gowthami Sukhavasi</h5>
@@ -114,7 +117,8 @@
                 </div>
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p>Best New Year Eve I ever had. Thanks to the team. They helped me to host a family dinner
+                        <p>Best New Year Eve I ever had. Thanks to the team.
+                            They helped me to host a family dinner
                             based on their recommendation.
                             I had a great time with my family
                         </p>
@@ -143,7 +147,8 @@
                     <h4>Quick Contact</h4>
                     <p><i class="fa fa-phone-square"></i>999999999</p>
                     <p><i class="fa fa-envelope"></i>abc@gmail.com</p>
-                    <p><i class="fa fa-home"></i>Raj Bhavan Road, Hyderabad</p>
+                    <p><i class="fa fa-home"></i>Raj Bhavan Road,
+                        Hyderabad</p>
                 </div>
                 <div class="col-md-3">
                     <h4>Follow Us on</h4>
@@ -153,7 +158,8 @@
                 </div>
             </div>
             <hr>
-            <p class="copyright">Made with <i class="fa fa-heart"></i> by Gowthami</p>
+            <p class="copyright">Made with <i class="fa fa-heart"></i> by
+                Gowthami</p>
         </div>
     </section>
     <script>
@@ -179,64 +185,42 @@
             }
         }
 
-        function openSearch() {
+        async function openSearch() {
             let output = '';
             let v = document.getElementById('text-search').value;
+            console.log(v);
+            const data = await fetch(
+                `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=17.4981257&lng=78.3860974&carousel=true&third_party_vendor=1`
+            );
+            const json = await data.json();
+            console.log(json.data.cards[0].card.card);
 
-            axios.get(`https://developers.zomato.com/api/v2.1/cities?q=${v}`, {
-                headers: {
-                    'user-key': "dd8d4d0ec90219d1053b0513eb6cfaae"
+            if (json) {
+                for (var i = 0; i < 12; i++) {
+                    output += `
+<div class="col-md-4">
+<div class="feature-box">
+<div class="feature-img">
+<a target = "_blank" href=" ${json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].action.link}">
+<img src="${"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].imageId}"
+        style="width=450px; height=450px;">
+</a>
+</div>
+<!--
+    <div class="feature-details">
+ <h4>${json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].action.text}</h4>    
+</div>
+--!>
+</div></div>
+`
                 }
+                document.getElementById('title').innerHTML += output;
+            }
+            else {
+                console.log("eror");
+            }
 
-            })
-                .then(function (response) {
-                    console.log(response.data);
-                    let k = response.data.location_suggestions[0].id;
-                    //  console.log(response.data.location_suggestions[0].id);
 
-                    axios.get(`https://developers.zomato.com/api/v2.1/collections?city_id=${k}`, {
-                        headers: {
-                            'user-key': "dd8d4d0ec90219d1053b0513eb6cfaae"
-                        }
-                    })
-
-                        .then(function (response) {
-                            console.log(response.data);
-
-                            for (var i = 0; i < 6; i++) {
-                                output += `
-                <div class="col-md-4">
-                <div class="feature-box">
-                <div class="feature-img">
-                <a href=" ${response.data.collections[i].collection.share_url}">
-                <img src="${response.data.collections[i].collection.image_url}" style="width=450px; height=450px;">
-                </a>
-                </div>
-                <div class="feature-details">
-                <h4>${response.data.collections[i].collection.title}</h4>
-                <p>${response.data.collections[i].collection.description}</p>           
-                </div></div></div>
-                `
-                            }
-                            document.getElementById('title').innerHTML += output;
-                        })
-
-                        .catch(function (error) {
-                            console.log(error);
-                        })
-
-                        .then(function () {
-                            // always executed
-                        });
-
-                })
-                .catch(function (error) {
-                    console.log(error);
-                })
-
-                .then(function () {
-
-                });
         }
     </script>
 </body>

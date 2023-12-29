@@ -63,7 +63,7 @@
 
 .features p {
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
 }
 
 .feature-img img {
@@ -82,12 +82,13 @@
 .feature-details {
     padding: 20px;
     text-align: justify;
-    height: 50%;
+    height: 30%;
 }
 
 .feature-details h4 {
     font-weight: 600;
-    margin-top: 20px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .feature-details .fa {
@@ -97,6 +98,7 @@
 .feature-box {
     box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
     margin-bottom: 30px;
+    border-radius: 50px;
 }
 /* Food gallery */
 .gallery {
@@ -237,7 +239,7 @@
 }
 
 .fa-heart {
-    margin 0 5px;
+    margin: 0 5px;
     color: #f44336;
 }
 
