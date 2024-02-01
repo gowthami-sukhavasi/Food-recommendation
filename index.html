@@ -2,36 +2,37 @@
 
 <head>
     <title>Food Recommendation</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
     <script src="jsfile.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
     <section class="header" id="hide-div" style="display: block">
-        <h1><a href class="typewrite" data-period="2000"
+        <h1>
+            <a href class="typewrite" data-period="2000"
                 data-type='["Welcome foodies!", "Order, Eat, Sleep, Repeat", "Hangry is an emotion"]'>
                 <span class="wrap"></span>
             </a>
         </h1>
         <p></p>
         <div class="input-group">
-            <input type="text" class="form-control" id="text-search" placeholder="Enter Your Destination">
+            <input type="text" class="form-control" id="text-search" placeholder="Enter Your Destination" />
             <div class="input-group-append">
-                <button type="submit" onclick="hideDiv();openSearch();" class="input-group-text btn">Search</button>
+                <button type="submit" onclick="hideDiv();openSearch();" class="input-group-text btn">
+                    Search
+                </button>
             </div>
         </div>
-
     </section>
     <section class="features" id="show-div" style="display: none">
         <div class="container">
             <h1>Trending collections!</h1>
             <p>Browse lists of the finest restaurants in your city.</p>
-            <div class="row" id="title">
-
-            </div>
+            <div class="row" id="title"></div>
         </div>
     </section>
 
@@ -42,27 +43,27 @@
                 <div class="col-md-3">
                     <div class="gallery-box">
                         <img
-                            src="https://66.media.tumblr.com/c1da35f283662765d688bcc90281d7d8/tumblr_mvhc10Xbv01ro9rq7o2_400.gif">
+                            src="https://66.media.tumblr.com/c1da35f283662765d688bcc90281d7d8/tumblr_mvhc10Xbv01ro9rq7o2_400.gif" />
                         <h4>Healthy</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="gallery-box">
                         <img
-                            src="https://media3.giphy.com/media/lGbz7CsaCj4Tm/giphy.gif?cid=790b7611dfc801f7206ce4a3348758d053b95de67fdfd034&rid=giphy.gif&ct=g">
+                            src="https://media3.giphy.com/media/lGbz7CsaCj4Tm/giphy.gif?cid=790b7611dfc801f7206ce4a3348758d053b95de67fdfd034&rid=giphy.gif&ct=g" />
                         <h4>Comfort Food</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="gallery-box">
-                        <img src="https://bestanimations.com/Food/Beverages/Coffee/coffee-animated-gif-18.gif">
+                        <img src="https://bestanimations.com/Food/Beverages/Coffee/coffee-animated-gif-18.gif" />
                         <h4>Coffee</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="gallery-box">
                         <img
-                            src="https://66.media.tumblr.com/6298469f379334e3c98aadf48fa461f6/tumblr_okknjsByo81sa9pj8o3_500.gifv">
+                            src="https://66.media.tumblr.com/6298469f379334e3c98aadf48fa461f6/tumblr_okknjsByo81sa9pj8o3_500.gifv" />
                         <h4>Chocolate</h4>
                     </div>
                 </div>
@@ -75,13 +76,12 @@
                 <div class="row">
                     <div class="col-md-8">
                         <h2>Get 10% off on pizza today</h2>
-                        <p>Order pizza before 11pm tonight and avail 10%
-                            flat discount.</p>
+                        <p>
+                            Order pizza before 11pm tonight and avail 10% flat discount.
+                        </p>
                     </div>
                     <div class="col-md-4">
-                        <button type="button" class="booking-btn">Order
-                            now</button>
-
+                        <button type="button" class="booking-btn">Order now</button>
                     </div>
                 </div>
             </div>
@@ -93,40 +93,40 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p> One of the amazing experience. I can browse all
-                            my favourite food things at a single place.
-                            From biryani to coffee, from healthy foods to
-                            deserts, everything is great!
+                        <p>
+                            One of the amazing experience. I can browse all my favourite
+                            food things at a single place. From biryani to coffee, from
+                            healthy foods to deserts, everything is great!
                         </p>
-                        <h5>Abhilasha </h5>
+                        <h5>Abhilasha</h5>
                         <small>Uttarakand</small>
                     </div>
-                    <img src="https://i.pinimg.com/736x/92/a5/02/92a5029a12e633636611e69680b1f556.jpg">
+                    <img src="https://i.pinimg.com/736x/92/a5/02/92a5029a12e633636611e69680b1f556.jpg" />
                 </div>
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p>Well planned, just what a working professional
-                            who doesn't have time to plan a surprise
-                            requires.
-                            Clean UI and variety of cuisines.</p>
+                        <p>
+                            Well planned, just what a working professional who doesn't have
+                            time to plan a surprise requires. Clean UI and variety of
+                            cuisines.
+                        </p>
                         <h5>Gowthami Sukhavasi</h5>
                         <small>Bangalore</small>
                     </div>
-                    <img
-                        src="https://media.licdn.com/dms/image/C5603AQElsaImTNX3bQ/profile-displayphoto-shrink_200_200/0/1603599431972?e=1676505600&v=beta&t=DHj5SW6c2zmyBqB3p1dIPu-Y1k5D9FThHlgDFm5f_7g">
+                    <img src="https://i.pinimg.com/736x/92/a5/02/92a5029a12e633636611e69680b1f556.jpg" />
                 </div>
                 <div class="col-md-4">
                     <div class="user-review">
-                        <p>Best New Year Eve I ever had. Thanks to the team.
-                            They helped me to host a family dinner
-                            based on their recommendation.
-                            I had a great time with my family
+                        <p>
+                            Best New Year Eve I ever had. Thanks to the team. They helped me
+                            to host a family dinner based on their recommendation. I had a
+                            great time with my family
                         </p>
                         <h5>Vishesh Kedia</h5>
                         <small>Hyderabad</small>
                     </div>
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1iLKVWWKh5a4JjUaplumXYPz1AfxlGktOgNrHEQ100tfTJW4yqw&s">
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1iLKVWWKh5a4JjUaplumXYPz1AfxlGktOgNrHEQ100tfTJW4yqw&s" />
                 </div>
             </div>
         </div>
@@ -147,8 +147,7 @@
                     <h4>Quick Contact</h4>
                     <p><i class="fa fa-phone-square"></i>999999999</p>
                     <p><i class="fa fa-envelope"></i>abc@gmail.com</p>
-                    <p><i class="fa fa-home"></i>Raj Bhavan Road,
-                        Hyderabad</p>
+                    <p><i class="fa fa-home"></i>Raj Bhavan Road, Hyderabad</p>
                 </div>
                 <div class="col-md-3">
                     <h4>Follow Us on</h4>
@@ -157,72 +156,12 @@
                     <p><i class="fa fa-twitter"></i> Twitter</p>
                 </div>
             </div>
-            <hr>
-            <p class="copyright">Made with <i class="fa fa-heart"></i> by
-                Gowthami</p>
+            <hr />
+            <p class="copyright">
+                Made with <i class="fa fa-heart"></i> by Gowthami
+            </p>
         </div>
     </section>
-    <script>
-
-        function hideDiv() {
-            console.log("inside hidediv");
-            var hide = document.getElementById("hide-div");
-            var show = document.getElementById("show-div");
-            var show1 = document.getElementById("show-div1");
-            var show2 = document.getElementById("show-div2");
-            var show3 = document.getElementById("show-div3");
-            var show4 = document.getElementById("show-div4");
-
-
-            if (hide.style.display === "block" && show.style.display === "none") {
-                hide.style.display = "none";
-                show.style.display = "block";
-                show1.style.display = "block";
-                show2.style.display = "block";
-                show3.style.display = "block";
-                show4.style.display = "block";
-
-            }
-        }
-
-        async function openSearch() {
-            let output = '';
-            let v = document.getElementById('text-search').value;
-            console.log(v);
-            const data = await fetch(
-                `https://www.swiggy.com/mapi/restaurants/list/v5?offset=0&is-seo-homepage-enabled=true&lat=17.4981257&lng=78.3860974&carousel=true&third_party_vendor=1`
-            );
-            const json = await data.json();
-            console.log(json.data.cards[0].card.card);
-
-            if (json) {
-                for (var i = 0; i < 12; i++) {
-                    output += `
-<div class="col-md-4">
-<div class="feature-box">
-<div class="feature-img">
-<a target = "_blank" href=" ${json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].action.link}">
-<img src="${"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/" + json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].imageId}"
-        style="width=450px; height=450px;">
-</a>
-</div>
-<!--
-    <div class="feature-details">
- <h4>${json.data.cards[0].card.card.gridElements.infoWithStyle.info[i].action.text}</h4>    
-</div>
---!>
-</div></div>
-`
-                }
-                document.getElementById('title').innerHTML += output;
-            }
-            else {
-                console.log("eror");
-            }
-
-
-        }
-    </script>
 </body>
 
 </html>
